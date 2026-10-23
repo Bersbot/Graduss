@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://baxhc40xb6b48"]
+
+[ext_resource type="Texture2D" uid="uid://dsd8khs0iy4lb" path="res://menuBackGround.jpg" id="1_ovt4u"]
+[ext_resource type="Script" uid="uid://c6b8u60s4pci5" path="res://menu.gd" id="1_skdf5"]
+[ext_resource type="Texture2D" uid="uid://bkjvx0aagu4su" path="res://icon.jpg" id="3_8hiqk"]
+[ext_resource type="PackedScene" uid="uid://bb550ms8sld32" path="res://music.tscn" id="4_rfeqo"]
+
+[node name="Menu" type="Control" unique_id=1651360398]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_skdf5")
+metadata/_edit_use_anchors_ = true
+
+[node name="MenuBackGround" type="Sprite2D" parent="." unique_id=1488936683]
+position = Vector2(576, 325)
+scale = Vector2(0.6, 0.45493)
+texture = ExtResource("1_ovt4u")
+
+[node name="playButtonColor" type="ColorRect" parent="MenuBackGround" unique_id=291930981]
+anchors_preset = -1
+anchor_left = 0.548611
+anchor_top = 0.666667
+anchor_right = 0.979167
+anchor_bottom = 0.901235
+offset_left = -960.0
+offset_top = -711.466
+offset_right = -960.0
+offset_bottom = -711.466
+color = Color(0, 0, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="play" type="Button" parent="MenuBackGround/playButtonColor" unique_id=726534728]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0142
+anchor_bottom = 1.0
+theme_override_font_sizes/font_size = 44
+text = "Играть в Это"
+icon = ExtResource("3_8hiqk")
+flat = true
+icon_alignment = 2
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="exitButtonColor" type="ColorRect" parent="MenuBackGround" unique_id=1970789361]
+anchors_preset = -1
+anchor_left = 0.0416667
+anchor_top = 0.666667
+anchor_right = 0.541667
+anchor_bottom = 0.901235
+offset_left = -960.0
+offset_top = -711.466
+offset_right = -960.0
+offset_bottom = -711.466
+color = Color(0, 0, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="exit" type="Button" parent="MenuBackGround/exitButtonColor" unique_id=642160856]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_font_sizes/font_size = 43
+text = "Выйти в окно :)"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" parent="." unique_id=1083646000 instance=ExtResource("4_rfeqo")]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(72, 24)
+volume_db = -4.0
